@@ -37,20 +37,13 @@ let concesionaria = {
     }
 },
 
-    //venderAuto: function(patenteBusq){
-    //    const resultado = this.buscarAuto(patenteBusq);
-    //    
-    //    if (resultado == null){
-    //        return null;
-    //    } else {
-    //    
-    //    return {...resultado, vendido: true};
-    //    
-    //    }
-    //},
+    venderAuto: function(patenteBusq){
+        const autoEncontrado = this.buscarAuto(patenteBusq);
+        if (autoEncontrado) {autoEncontrado.vendido = true};
+        },
 }
 
 
 
-
-console.log(concesionaria.venderAuto("JJK116"));
+    concesionaria.venderAuto("JJK116");
+    console.log(concesionaria.autos);
