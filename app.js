@@ -41,9 +41,13 @@ let concesionaria = {
         const autoEncontrado = this.buscarAuto(patenteBusq);
         if (autoEncontrado) {autoEncontrado.vendido = true};
         },
+
+    autosParaLaVenta: function(){
+        let disponiblesParaVenta = this.autos.filter(function (auto){
+            if (auto.vendido == false) {return auto}
+        })
+        return disponiblesParaVenta;
+},
 }
 
 
-
-    concesionaria.venderAuto("JJK116");
-    console.log(concesionaria.autos);
