@@ -48,6 +48,9 @@ let concesionaria = {
         })
         return disponiblesParaVenta;
 },
+    autosNuevos: function(){
+        let listaAutosNuevos = this.autosParaLaVenta();
+        return listaAutosNuevos.filter(auto => (auto.km < 100));
+},
+
 }
-
-
