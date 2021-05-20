@@ -52,5 +52,13 @@ let concesionaria = {
         let listaAutosNuevos = this.autosParaLaVenta();
         return listaAutosNuevos.filter(auto => (auto.km < 100));
 },
+    listaDeVentas: function(){
+        let arrayPrecios = [];
+        let autosVendidos = this.autos.filter(auto => auto.vendido == true);
 
+        autosVendidos.forEach( function(v, i, a){
+            arrayPrecios.push(autosVendidos[i].precio);
+        });
+        return arrayPrecios;
+},
 }
